@@ -57,3 +57,21 @@ console.log(income);
 profitHtml.textContent = income;
 sumForPayHtml.textContent = monneyForPay;
 percRandomHtml.textContent = randomSale;
+
+
+//Advanced
+const advancedHtml = document.querySelector("#advanced");
+advancedHtml.innerHTML = `
+<h1>Advanced</h1>
+<p>Максимальне число: <span>${maxNumber}</span></p>
+<p>Мінімальне число: <span>${minNumber}</span></p>
+<p>Вартість всіх товарів: <span>${amount}</span></p>
+<p>Ціла вартість: <span>${newRoundingAmount}</span></p>
+<p>Сума округлена до сотень: <span>${allNumbers}</span></p>
+<p>Булеве значення:<span> ${evenOrOdd}</span></p>
+<p>Решта выд 500: <span>${rest}</span></p>
+<p>Cередня ціна товарів: <span>${middleNumber}</span></p>
+<p>Випадкова знижка: <span>${randomSale}грн. </span> </p>
+<p>Сума до оплати: <span>${monneyForPay}</span></p>
+<p>Чистий прибуток: <span>${income}</span></p>
+`;
