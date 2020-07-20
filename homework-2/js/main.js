@@ -33,7 +33,6 @@ if(evenNumbers) {
     
 }
 
-//alert(sumOfNumbers); 
 console.log(sumOfNumbers);
 
 thisResult.textContent = sumOfNumbers;
