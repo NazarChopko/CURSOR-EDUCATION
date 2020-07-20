@@ -1,0 +1,43 @@
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;}
+
+    
+
+.title { display: block;
+            width: 75%;
+            border:1px solid black;
+            letter-spacing: 2px;
+            text-align: center;
+            font-size: 150px;
+            margin: 0 auto;
+            margin-top: 400px;
+            background-color: rosybrown;
+            transition: .5s;
+            }
+
+ .title:hover{opacity: .7;
+                width: 100%;}
+
+  .subtitle{
+         display: inline-block;
+         margin-left:120px;
+         margin-top:0px;
+         background-color: brown; 
+         color:white;
+         font-size: 50px;
+         border-left:5px solid black;
+         border-bottom:5px solid black ;
+         }              
+    .resultBlock{
+        font-family: cursive;
+        font-size:40px;
+        font-weight: bold;
+        border: 3px solid red;
+        margin-left:230px;
+        margin-top: -50px;
+        text-align: center;
+        background-color:pink;
+        width:70%;
+    }    
