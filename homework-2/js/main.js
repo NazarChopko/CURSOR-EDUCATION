@@ -23,7 +23,7 @@ let sumOfNumbers = 0;
 //6
  if(evenNumbers) {
     for (let j = writeFirstNumber; j <= writeSecondNumber; j++){
-        if(evenNumbers && j % 2 == 0){continue;
+        if(evenNumbers && j % 2 === 0){continue;
         }
         sumOfNumbers += j;
     }
