@@ -17,9 +17,7 @@ body {
             transition: .5s;
             }
 
-.title:hover{opacity: .7;
-             width: 100%;
-            }
+.title:hover{width: 100%;}
 
 
 .list{
