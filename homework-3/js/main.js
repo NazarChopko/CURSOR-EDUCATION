@@ -9,12 +9,11 @@ const task8Html = document.querySelector('.task8');
 
 
 // 1.Найбільше число
-function getMaxDigit(number){
- return number = String(number).split('').sort().reverse()
+function getMaxDigit(maxNumber){
+return String(maxNumber).split('').sort().reverse()[0];
 }
-console.log(getMaxDigit(674835)[0]);
 
-task1Html.textContent = getMaxDigit(674835)[0];
+task1Html.textContent = getMaxDigit(prompt('Введіть число з якого хочете вивести максимальну цифру?'));
 
 //2.Степінь
 
@@ -34,8 +33,8 @@ task2Html.textContent = power(2,3);
 
 //3.Імя
 function reformName(name) {
-    let word = name[0].toUpperCase() + name.slice(1).toLowerCase();
-    return  word;
+    return name[0].toUpperCase() + name.slice(1).toLowerCase();
+    
   } 
   console.log(reformName('naZAR'));
 
