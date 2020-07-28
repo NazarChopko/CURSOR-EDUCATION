@@ -22,7 +22,7 @@ let couples = [];
     }
 
 
-    for(j = 0; j < students.length/2; j++){
+    for(let j = 0; j < students.length/2; j++){
      couples.push([boy[j],girl[j]]);
     }
 
@@ -38,8 +38,9 @@ task1Html.textContent = allCouples;
 function doThemes(){
 
     let doThemes = [];
-     for(j = 0; j < themes.length; j++){
-     doThemes.push([allCouples[j].join(' і '), themes[j]]);
+     for(let j = 0; j < themes.length; j++){
+     //doThemes.push([allCouples[j].join(' і '), themes[j]]);
+    doThemes.push(`${[allCouples[j].join(' та '), themes[j]]}`)
     }
     return doThemes;
     }
@@ -53,7 +54,7 @@ task2Html.textContent = allThemes;
 
 function doMarks(){
     let markToStudent = [];
-    for(j = 0; j < students.length; j++){
+    for(let j = 0; j < students.length; j++){
         markToStudent.push([students[j],marks[j]]);
     }
     return markToStudent;
@@ -68,8 +69,8 @@ task3Html.textContent = allMarks;
 
 function doRandomMarksForStudents(){
     let randomMarks = [];
-    for(j = 0; j < allThemes.length; j++){
-        randomMarks.push([allThemes[j] +',' +  ' ' + (Math.ceil((Math.random()*10)/2))])
+    for(let j = 0; j < allThemes.length; j++){
+        randomMarks.push(`${[allThemes[j] +',' +  ' ' + (Math.ceil((Math.random()*10)/2))]}`)
     }
     return randomMarks;
 }
