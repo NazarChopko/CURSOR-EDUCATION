@@ -52,15 +52,22 @@ task5Html.textContent = getDividedByFive(...numbers);
 //6 Ділимо слово по 3 букви
 const generateCombinations = (word) => {
     let result = [];
-    for(let j = 0; j <= word.length; j = j+3){
-        result.push(word.toLowerCase().slice(j,j+3))
+    let skipSpace = ''; 
+    for(let i = 0; i < word.length; i++){
+        if (word[i] === ' '){continue;}
+            skipSpace += word[i];
     }
-    return result
-}
+    
+    
+    for(let j = 0; j < skipSpace.length; j = j+3){
+         result.push(skipSpace.toLowerCase().slice(j,j+3))
+    }
+    return result}
 
-console.log(generateCombinations('CalcuLATEd'));
 
-task6Html.textContent = generateCombinations('CalcuLATEd');
+console.log(generateCombinations('Ca lcuLA teD'));
+
+task6Html.textContent = generateCombinations('Ca lcuLA teD');
 
 
 
