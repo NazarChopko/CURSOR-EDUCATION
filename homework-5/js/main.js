@@ -10,7 +10,7 @@ const task6Html = document.querySelector('.task6');
 
 //1 Масив випадкових чисел
 const getRandomArray = (lenght, min, max) => 
-Array(lenght).fill(0).map(() => (Math.random()*(min-max)+max).toFixed(0))
+new Array(lenght).fill(0).map(() => parseInt((Math.random()*(min-max)+max).toFixed(0)))
 
 const random = getRandomArray(15,1,100);
 console.log(random)
@@ -22,7 +22,7 @@ task1Html.textContent = random;
 
 const getAverage = (...numbers) => { 
     let notIntegral = numbers.filter((el) => el % 1 === 0);
-    let result =  notIntegral.reduce((acum,cur) => acum + cur)/notIntegral.length;
+    let result =  notIntegral.reduce((acum,cur) => acum + cur,0)/notIntegral.length;
     return result.toFixed(1);
 }
 
@@ -44,13 +44,28 @@ console.log(countPositiveNumbers(filterMinusNumber));
 task4Html.textContent = countPositiveNumbers(filterMinusNumber);
 
 //5 Цифри які діляться націло на 5
-getDividedByFive = (...numbers) => numbers.filter((el) => el % 5 === 0);
+const getDividedByFive = (...numbers) => numbers.filter((el) => el % 5 === 0);
 console.log(getDividedByFive(...numbers));
 
 task5Html.textContent = getDividedByFive(...numbers);
 
 //6 Ділимо слово по 3 букви
-const generateCombinations = (word) => {
+const generateCombinations = (word, value) => {
+    const currentWord = word.toLowerCase().replace(/\s+/g, '');
+    const result = [];
+     for(let i = 0; i < currentWord.length; i+=value) {
+     const tempArr = [currentWord.slice(i, i + value)];
+     result.push(tempArr)
+     }
+     return result
+    }
+     
+     
+     console.log(generateCombinations('Ca lcuLA teD',3));
+     task6Html.textContent = generateCombinations('Ca lcuLA teD',3);
+
+
+     /*const generateCombinations = (word) => {
     let result = [];
     let skipSpace = ''; 
     for(let i = 0; i < word.length; i++){
@@ -67,7 +82,7 @@ const generateCombinations = (word) => {
 
 console.log(generateCombinations('Ca lcuLA teD'));
 
-task6Html.textContent = generateCombinations('Ca lcuLA teD');
+task6Html.textContent = generateCombinations('Ca lcuLA teD');*/
 
 
 
