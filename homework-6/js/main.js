@@ -30,7 +30,7 @@ const students = [{
 
 const getSubjects = (obj) => {
     const subject = Object.keys(obj.subjects);
-    return subject.map((el) => el.slice(0,1).toUpperCase() + el.slice(1).replace('_',' '));
+    return subject.map((el) => el.slice(0,1).toUpperCase() + el.slice(1).replace('_',' ').toLowerCase());
 }
 
 console.log(getSubjects(students[0]));
@@ -40,16 +40,11 @@ console.log(getSubjects(students[2]));
 
 //2
 const getAverageMark = (obj) =>{
-    const subject = Object.values(obj.subjects);
+    const subject = Object.values(obj.subjects).flat();
     let sum = 0;
-    let middle = 0;
-    
-
-        for(let j = 0; j < subject.length; j++){
-            middle += subject[j].length;
-                sum = subject[j].reduce((a,b) => a + b, sum);
-    }
-        return Number(sum/middle).toFixed(2);
+    let middle = subject.length;
+        sum = subject.reduce((acc,a) => acc + a, 0)
+    return Number((sum/middle).toFixed(2));
 }
 console.log(getAverageMark(students[0]));
 console.log(getAverageMark(students[1]));
@@ -58,8 +53,8 @@ console.log(getAverageMark(students[2]));
 
 //3
 const getStudentInfo = (student) => {
-  return {name:student.name,  course:student.course, avarageMark:getAverageMark(student)};
-   
+   const{name,course} = student
+   return { name,course,avarageMark:getAverageMark(student)}
 }
 
 console.log(getStudentInfo(students[0]));
@@ -68,21 +63,16 @@ console.log(getStudentInfo(students[2]));
 
 //4
 
-const getStudentsNames = (name) => { 
-  return name.map((el) => el.name).sort();
-}
+const getStudentsNames = name => name.map((el) => el.name).sort();
+
 console.log(getStudentsNames(students));
 
 //5
 
 const getBestStudent = (student) => {
-  let theBest;
-  if(getAverageMark(student[0]) > getAverageMark(student[1]) && getAverageMark(student[0]) > getAverageMark(student[2])){
-    theBest = student[0].name;
-  } else if (getAverageMark(student[1]) > getAverageMark(student[0]) && getAverageMark(student[1]) > getAverageMark(student[2])){
-    theBest = student[1].name;
-  } else { theBest = student[2].name;}
-  return theBest;
+  const maxMark = Math.max(...student.map(item => getAverageMark(item)));
+  const bestStudent = student.find(item => getAverageMark(item) === maxMark);
+  return bestStudent.name;
 }
 
 console.log(getBestStudent(students));
@@ -104,7 +94,6 @@ const calculateWordLetters = (word) =>{
 }
 
 console.log(calculateWordLetters('MamaHohotala'))
-
 
 
 
