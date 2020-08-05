@@ -30,7 +30,7 @@ const students = [{
 
 const getSubjects = (obj) => {
     const subject = Object.keys(obj.subjects);
-    return subject.map((el) => el.slice(0,1).toUpperCase() + el.slice(1).replace('_',''));
+    return subject.map((el) => el.slice(0,1).toUpperCase() + el.slice(1).replace('_',' '));
 }
 
 console.log(getSubjects(students[0]));
@@ -102,8 +102,6 @@ const calculateWordLetters = (word) =>{
     }
     return result;
 }
-
-
 
 console.log(calculateWordLetters('MamaHohotala'))
 
