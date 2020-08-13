@@ -4,8 +4,15 @@ function getRandomColor() {
   );
 }
 
-function showBlocks() {
-  document.querySelector(".inner-block").classList.toggle("hidden");
+for (let i = 0; i < 25; i++) {
+  let box = document.createElement("div");
+  box.className = "block";
+  document.querySelector(".current-block").prepend(box);
+}
+
+const allBlocks = document.querySelector(".inner-block");
+function showBlocks(allBlocks) {
+  allBlocks.classList.toggle("hidden");
 }
 
 function paintBlock() {
@@ -17,12 +24,10 @@ function paintBlock() {
 
 function generateBlocks() {
   paintBlock();
-  showBlocks();
-  if (document.querySelector(".inner-block").classList.contains("hidden")) {
-    document.querySelector(".btn-show").textContent = "Show";
-  } else {
-    document.querySelector(".btn-show").textContent = "Hidden";
-  }
+  showBlocks(allBlocks);
+  document.querySelector(
+    ".btn-show"
+  ).textContent = allBlocks.classList.contains("hidden") ? "Show" : "Hidden";
 }
 
 let interval;
