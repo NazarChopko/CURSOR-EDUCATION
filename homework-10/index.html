@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="piano">
+      <div class="key" data-key="65" data-note="A">A</div>
+      <div class="key" data-key="83" data-note="S">S</div>
+      <div class="key" data-key="68" data-note="D">D</div>
+      <div class="key" data-key="70" data-note="F">F</div>
+      <div class="key" data-key="71" data-note="G">G</div>
+    </div>
+    <div class="musics">
+      <audio data-key="65" id="A" src="sound/1.mp3"></audio>
+      <audio data-key="83" id="S" src="sound/2.mp3"></audio>
+      <audio data-key="68" id="D" src="sound/3.mp3"></audio>
+      <audio data-key="70" id="F" src="sound/4.mp3"></audio>
+      <audio data-key="71" id="G" src="sound/5.mp3"></audio>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

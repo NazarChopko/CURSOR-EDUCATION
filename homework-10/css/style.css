@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(https://theplacement.ru/wp-content/uploads/2018/12/zritelnyj-zal-grand-opera-garne.jpg)
+    center center/cover;
+}
+
+.piano {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 4px;
+  user-select: none;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 15px;
+  opacity: 0.5;
+}
+
+.key.active {
+  background-color: grey;
+}
