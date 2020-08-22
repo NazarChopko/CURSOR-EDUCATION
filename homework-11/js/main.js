@@ -3,7 +3,7 @@ const answer = document.querySelector(".answer");
 
 const time = 50;
 function getRandomChinese(length) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     let current = 0;
     let sign = parseInt(Date.now().toString().slice(-5));
     let result = [];
