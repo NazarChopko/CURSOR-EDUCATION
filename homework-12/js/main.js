@@ -8,10 +8,13 @@ const btnNextPrev = document.getElementById("two_btn");
 const next = document.getElementById("next");
 const prev = document.getElementById("previous");
 
-const BASE = "https://swapi.dev/api/";
+const BASE = "http://swapi.dev/api/";
+const toHTTPS = (url) =>
+  url[4].toLowerCase() === "s" ? url : url.slice(0, 4) + "s" + url.slice(4);
 
 async function getRequest(url) {
-  let req = await fetch(url);
+  const newUrl = toHTTPS(url);
+  let req = await fetch(newUrl);
   let content = await req.json();
   return content;
 }
