@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="./image/star_wars_logo_PNG6.png" alt="" />
+    </div>
+    <div class="inner-block" id="main_container">
+      <div class="box_for_characters">
+        <div class="contain_for_but">
+          <button class="btn" id="characters_btn">Show characters</button>
+          <select id="list_char">
+            <option value="1">I.A New Hope</option>
+            <option value="2">II.The Empire Strikes Back</option>
+            <option value="3">III.Return of the Jedi</option>
+            <option value="4">IV.The Phantom Menace</option>
+            <option value="5">V.Attack of the Clones</option>
+            <option value="6">VI.Revenge of the Sith</option>
+          </select>
+        </div>
+
+        <div id="text_characters"></div>
+      </div>
+
+      <div class="box_for_planets">
+        <button class="btn button_plan" id="btn_show_planets">
+          Show Planets
+        </button>
+        <div class="next_and_prev_btn hidden" id="two_btn">
+          <button class="btn" id="previous">Previous</button>
+          <button class="btn" id="next">Next</button>
+        </div>
+
+        <div id="text_planets"></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

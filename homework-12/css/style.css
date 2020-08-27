@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poller One", cursive;
+  font-weight: 500;
+}
+
+body {
+  background-image: url(../image/background-photo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo {
+  margin: 20px auto;
+  width: 500px;
+}
+#main_container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.char_info {
+  text-align: center;
+  border: 2px solid orange;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+}
+
+.plan_info {
+  text-align: center;
+  border: 2px solid orange;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+}
+
+#text_characters {
+  margin-top: 10px;
+}
+
+h2,
+h3 {
+  display: inline-block;
+}
+.box_for_characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+}
+
+.box_for_planets {
+  width: 40%;
+}
+
+.btn {
+  width: 45%;
+  height: 50px;
+  border: 5px solid orange;
+  border-radius: 8px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.btn:hover {
+  transform: translate(3px, 3px);
+  transition-duration: 1s;
+}
+
+#list_char {
+  width: 45%;
+  height: 50px;
+  border: 5px solid orange;
+  border-radius: 8px;
+  margin-left: 10px;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#list_char:hover {
+  transform: translate(3px, 3px);
+  transition-duration: 1s;
+}
+
+#next {
+  margin-left: 6px;
+}
+.button_plan {
+  margin-left: 250px;
+}
+
+.next_and_prev_btn {
+  margin: 10px 0 0 50px;
+}
+#text_planets {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.contain_for_but {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
