@@ -96,7 +96,7 @@ next.addEventListener("click", () => {
 });
 
 prev.addEventListener("click", () => {
-  if (numPage < 1) {
+  if (numPage === 1) {
     return;
   }
   getRequest(urlPlaneted(--numPage))
