@@ -1,0 +1,27 @@
+import { maxNumber } from "../homework-1/js/index";
+import res from "../homework-2/js/index";
+import { homeWork3 } from "../homework-3/js/index";
+import { allMarks } from "../homework-4/js/index";
+import { random } from "../homework-5/js/index";
+import { name } from "../homework-6/js/index";
+import { homeWork5 } from "../homework-7/js/index";
+import { homeWork8 } from "../homework-8/js/index";
+import { homeWork9 } from "../homework-9/js/index";
+import { play } from "../homework-10/js/index";
+import { getRandomChinese } from "../homework-11/js/index";
+import showPlaneted from "../homework-12/js/index";
+import startGenerateBtn from "../homework-13/js/index";
+
+console.log(`HW1- Максимальна ціна - ${maxNumber}`);
+console.log(`HW2- Сума непарних чисел від 1 до 10 - ${res}`);
+homeWork3();
+console.log(`HW4 - Оцінки студентів - ${allMarks}`);
+console.log(`HW5 -  15 рандомних чисел - ${random}`);
+console.log(`HW6 - Імена студентів - ${name}`);
+console.log(`HW7 - Податки ІТ-спеціаліста в Україні - ${homeWork5} ГРН`);
+console.log(`HW8 - ${homeWork8}`);
+homeWork9;
+play;
+getRandomChinese(4);
+showPlaneted;
+startGenerateBtn;

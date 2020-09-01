@@ -1,44 +1,45 @@
 const numbers = [6, 2, 55, 11, 78, 2, 55, 77, 5.47, 57, 87, 23, 2, 56, 3, 2];
-const task1Html = document.querySelector('.task1');
-const task2Html = document.querySelector('.task2');
-const task3Html = document.querySelector('.task3');
-const task4Html = document.querySelector('.task4');
-const task5Html = document.querySelector('.task5');
-const task6Html = document.querySelector('.task6');
-
-
+const task1Html = document.querySelector(".task1");
+const task2Html = document.querySelector(".task2");
+const task3Html = document.querySelector(".task3");
+const task4Html = document.querySelector(".task4");
+const task5Html = document.querySelector(".task5");
+const task6Html = document.querySelector(".task6");
 
 //1 Масив випадкових чисел
-const getRandomArray = (lenght, min, max) => 
-new Array(lenght).fill(0).map(() => parseInt((Math.random()*(min-max)+max).toFixed(0)))
+const getRandomArray = (lenght, min, max) =>
+  new Array(lenght)
+    .fill(0)
+    .map(() => parseInt((Math.random() * (min - max) + max).toFixed(0)));
 
-const random = getRandomArray(15,1,100);
-console.log(random)
+const random = getRandomArray(15, 1, 100);
+console.log(random);
 
 task1Html.textContent = random;
 
-
 //2 середнє арифметичне
 
-const getAverage = (...numbers) => { 
-    let notIntegral = numbers.filter((el) => el % 1 === 0);
-    let result =  notIntegral.reduce((acum,cur) => acum + cur,0)/notIntegral.length;
-    return result.toFixed(1);
-}
+const getAverage = (...numbers) => {
+  let notIntegral = numbers.filter((el) => el % 1 === 0);
+  let result =
+    notIntegral.reduce((acum, cur) => acum + cur, 0) / notIntegral.length;
+  return result.toFixed(1);
+};
 
-console.log(getAverage(...numbers))
+console.log(getAverage(...numbers));
 
 task2Html.textContent = getAverage(...numbers);
 
 //3 Фільтрує парні числа
 const filterEvenNumbers = (...numbers) => numbers.filter((el) => el % 2 !== 0);
-console.log(filterEvenNumbers(...numbers))
+console.log(filterEvenNumbers(...numbers));
 
 task3Html.textContent = filterEvenNumbers(...numbers);
 
 //4 Фільтрує цифри які білльші за 0
-const filterMinusNumber = [-1,4,6,-4,-9,4]
-const countPositiveNumbers = (filterMinusNumber) => filterMinusNumber.filter((el) => el > 0).length;
+const filterMinusNumber = [-1, 4, 6, -4, -9, 4];
+const countPositiveNumbers = (filterMinusNumber) =>
+  filterMinusNumber.filter((el) => el > 0).length;
 console.log(countPositiveNumbers(filterMinusNumber));
 
 task4Html.textContent = countPositiveNumbers(filterMinusNumber);
@@ -51,21 +52,19 @@ task5Html.textContent = getDividedByFive(...numbers);
 
 //6 Ділимо слово по 3 букви
 const generateCombinations = (word, value) => {
-    const currentWord = word.toLowerCase().replace(/\s+/g, '');
-    const result = [];
-     for(let i = 0; i < currentWord.length; i+=value) {
-     const tempArr = [currentWord.slice(i, i + value)];
-     result.push(tempArr)
-     }
-     return result
-    }
-     
-     
-     console.log(generateCombinations('Ca lcuLA teD',3));
-     task6Html.textContent = generateCombinations('Ca lcuLA teD',3);
+  const currentWord = word.toLowerCase().replace(/\s+/g, "");
+  const result = [];
+  for (let i = 0; i < currentWord.length; i += value) {
+    const tempArr = [currentWord.slice(i, i + value)];
+    result.push(tempArr);
+  }
+  return result;
+};
 
+console.log(generateCombinations("Ca lcuLA teD", 3));
+task6Html.textContent = generateCombinations("Ca lcuLA teD", 3);
 
-     /*const generateCombinations = (word) => {
+/*const generateCombinations = (word) => {
     let result = [];
     let skipSpace = ''; 
     for(let i = 0; i < word.length; i++){
@@ -83,6 +82,3 @@ const generateCombinations = (word, value) => {
 console.log(generateCombinations('Ca lcuLA teD'));
 
 task6Html.textContent = generateCombinations('Ca lcuLA teD');*/
-
-
-
